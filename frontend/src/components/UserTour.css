@@ -1,0 +1,134 @@
+.tour-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.tour-card {
+    background: #fff;
+    width: 450px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    position: relative;
+    animation: tourFadeIn 0.3s ease-out;
+}
+
+@keyframes tourFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tour-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tour-header h3 {
+    margin: 0;
+    color: #512da8;
+    font-size: 1.5rem;
+}
+
+.tour-skip-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.tour-skip-btn:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.tour-content p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tour-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.tour-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: 0.3s;
+}
+
+.tour-dot.active {
+    background: #512da8;
+    width: 20px;
+    border-radius: 4px;
+}
+
+.tour-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.tour-next-btn {
+    background: #512da8;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tour-next-btn:hover {
+    background: #3f51b5;
+    transform: translateY(-2px);
+}
+
+.tour-prev-btn {
+    background: #eee;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tour-prev-btn:hover {
+    background: #ddd;
+}

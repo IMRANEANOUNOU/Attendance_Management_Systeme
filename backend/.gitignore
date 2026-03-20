@@ -1,0 +1,113 @@
+# ============================================================
+# Python / Django
+# ============================================================
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+sdist/
+
+# Django migrations (each dev regenerates from models)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Database files
+db.sqlite3
+db.sqlite3-journal
+*.db
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Django static files (collected)
+staticfiles/
+static_collected/
+
+# Media uploads (user-generated content)
+media/
+
+# ============================================================
+# Node.js / React (frontend/)
+# ============================================================
+
+# Dependencies
+frontend/node_modules/
+node_modules/
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# IDE / Editor
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ============================================================
+# OS generated files
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Misc
+# ============================================================
+
+# Compressed files / archives
+*.zip
+*.tar.gz
+*.rar
+
+# Temporary / test scripts
+compare_categories.py
+compare_stats.py
+deduplicate_seances.py
+test_stop.py
+bobo.txt
+image.png
+
+# Coverage & testing
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# CMake (dlib build artifacts)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Mobile app build artifacts (if any)
+mobile_clean/

@@ -1,0 +1,128 @@
+/* L-Background li kay-ghtti chacha kamla */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    /* Awla dir l-lon dyal l-app dyalk */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* L-container dyal l-logo w rih */
+.wind-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* L-Logo dyal l-medrasa */
+.school-logo {
+    width: 120px;
+    z-index: 10;
+    /* Animation dyal l-logo kay-tmal b rih */
+    animation: windBlow 2s ease-in-out infinite alternate;
+}
+
+/* Khtota dyal rih (Wind effects) */
+.wind-line {
+    position: absolute;
+    height: 2px;
+    background: #cbd5e1;
+    /* Lon dyal rih (gris mftou7) */
+    border-radius: 10px;
+    opacity: 0;
+}
+
+/* Mawa9i3 dyal khtota d rih */
+.wind-line:nth-child(1) {
+    top: 30%;
+    width: 60px;
+    animation: gust 1.5s infinite linear;
+}
+
+.wind-line:nth-child(2) {
+    top: 50%;
+    width: 100px;
+    animation: gust 1.2s infinite linear 0.5s;
+}
+
+.wind-line:nth-child(3) {
+    top: 70%;
+    width: 40px;
+    animation: gust 1.8s infinite linear 0.2s;
+}
+
+/* 🌪️ Keyframes: L-logo kay-t7rek b rih */
+@keyframes windBlow {
+    0% {
+        transform: rotate(0deg) translateX(0px);
+    }
+
+    25% {
+        transform: rotate(6deg) translateX(10px);
+    }
+
+    50% {
+        transform: rotate(2deg) translateX(3px);
+    }
+
+    75% {
+        transform: rotate(8deg) translateX(12px);
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(0px);
+    }
+}
+
+/* 🌪️ Keyframes: Rih kay-doz zreb */
+@keyframes gust {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+}
+
+/* Text sghir that l-logo */
+.loading-text {
+    position: absolute;
+    bottom: -40px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
